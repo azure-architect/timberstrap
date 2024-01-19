@@ -1,0 +1,41 @@
+{
+  "name": "timberstrap",
+  "version": "1.0.0",
+  "description": "This child theme for Picostrap leverages the Timber 2.X library, enabling advanced templating in WordPress using the Twig engine. It introduces the 'twig' shortcode for inline Twig templating, providing a seamless integration of Twig directly within WordPress posts and pages.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build:tailwind": "npx tailwindcss -i ./css-output/bundle.css -o ./css-output/tailwind.css",
+    "build:scss": "npx sass ./sass/main.scss ./css-output/bundle.css",
+    "build:html": "node ./extensions/inc/assets/createBundle.mjs",
+    "build:tasks": "npm run build:scss && npm run build:tailwind && npm run build:html",
+    "autocomplete": "npm run build:scss && GENERATE_AUTOCOMPLETE=true npx tailwindcss -i ./css-output/bundle.css -o ./css-output/autocomplete.css",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielRSnell/timberstrap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielRSnell/timberstrap/issues"
+  },
+  "homepage": "https://github.com/DanielRSnell/timberstrap#readme",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.3.1",
+    "flowbite": "^2.2.1",
+    "flowbite-typography": "^1.0.3",
+    "node-fetch": "^3.3.2",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.4",
+    "scss": "^0.2.4",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.11"
+  }
+}

@@ -1,0 +1,67 @@
+///////////////////////////////////////////////////
+// MAIN.SCSS
+// Comprehensive Guide
+//////////////////////////////////////////////////
+
+/*
+Welcome to main.scss! This file serves as the central hub for all your styling needs in your project. It's designed to be flexible, allowing you to incorporate various frameworks and custom styles with ease. Here's a breakdown of its structure and how to use it:
+
+1. Atomic Variables:
+   - `@use "atomic-vars/main" as _vars;`
+   This line imports atomic variables using Open Props. These variables offer a fast and easy way to extend your SCSS. Uncomment this line if you wish to use atomic design principles in your styling.
+
+2. Tailwind CSS Integration:
+   - `@tailwind base;`
+   - `@tailwind components;`
+   - `@tailwind utilities;`
+   These directives import different layers of Tailwind CSS, a utility-first CSS framework. The base layer includes browser normalization, components for reusable patterns, and utilities for single-purpose classes.
+
+3. PicoCSS Support (Optional):
+   - `@import 'pico-scss/pico';`
+   Uncomment this line if you wish to include PicoCSS, a minimal CSS framework for semantic HTML.
+
+4. LiveCanvas and Bootstrap Support (Optional):
+   - Includes Bootstrap loader, WordPress basic styles, picostrap, and WooCommerce support.
+   Uncomment these lines if your project is using LiveCanvas, a tool for building web pages with Bootstrap.
+
+5. Custom CSS:
+   - `@import "custom";`
+   This line imports a file named 'custom.scss'. Use this file to write your custom styles. If it's part of a child theme or a specific section of your project, this is where you should include it.
+
+6. Adding Your Own SCSS:
+   - You can create a file named `_custom.scss` for your custom CSS. This file isn't included by default, but you can use `_custom.scss.example` as a template. Any SCSS files you add to this directory are automatically included in your theme.
+
+This file is designed to be modular and flexible. Feel free to comment or uncomment sections according to the needs of your project. Happy styling!
+*/
+
+// @use "atomic-vars/main" as _vars; // Atomic Vars uses Open Props to extend your SCSS faster and easier.
+
+// Winden Tailwind Support 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Activate for PicoCSS
+// @import 'pico-scss/pico'; // PicoCSS for  SCSS
+
+// // Activate for stock LiveCanvas
+// @import "bootstrap-loader"; 
+// @import "wp_basic_styles";      
+// @import "picostrap";  
+// @import "woocommerce";
+
+// CUSTOM CSS : THE CHILD THEME STUFF, IF ITS THERE
+@import "custom";
+
+
+/* Use _custom.scss to add your own custom CSS. 
+   This file is not included in the theme by default, 
+   but you can copy the _custom.scss.example file to _custom.scss 
+   and it will be automatically included in the theme. 
+   You can also add your own SCSS files to this directory 
+   and they will be automatically included in the theme as well. 
+*/
+
+#wrapper-navbar {
+   display: none;
+}
